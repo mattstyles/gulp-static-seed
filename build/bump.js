@@ -27,8 +27,6 @@ module.exports = (function() {
                 encoding: 'utf8'
             }));
 
-            console.log( pkg.version + 1 );
-
             return vers || pkg.version;
         }
     }
