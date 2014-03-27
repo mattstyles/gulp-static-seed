@@ -1,0 +1,4 @@
+<header>
+    <h1><a href="http://github.com/mattstyles/gulp-static-seed/">{{ fullname }}</a></h1>
+    {{> nav }}
+</header>

@@ -1,0 +1,12 @@
+{
+    "nav": [
+        {
+            "link": "Section",
+            "href": "section"
+        },
+        {
+            "link": "Another",
+            "href": "another-link"
+        }
+    ]
+}
