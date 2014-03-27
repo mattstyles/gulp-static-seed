@@ -33,8 +33,6 @@ npm install
 gulp watch -o
 ```
 
-Check the wiki for more explanation.
-
 
 ## Did you say components?
 
