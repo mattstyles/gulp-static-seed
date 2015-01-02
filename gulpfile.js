@@ -10,7 +10,6 @@ var path                = require( 'path' ),
 
     gulp                = require( 'gulp' ),
     gutil               = require( 'gulp-util' ),
-    rimraf              = require( 'gulp-rimraf' ),
     markdown            = require( 'gulp-markdown' ),
     gulpBump            = require( 'gulp-bump' ),
     notify              = require( 'gulp-notify' ),
@@ -34,6 +33,7 @@ var path                = require( 'path' ),
     connectLivereload   = require( 'connect-livereload' ),
     hogan               = require( 'hogan.js' ),
     moment              = require( 'moment' ),
+    del                 = require( 'del' ),
 
     bump                = require( './build/bump' ),
     realAmerican        = require( './build/realAmerican' ),
@@ -175,12 +175,8 @@ gulp.task( 'bump', function() {
 /**
  * Mashes up the dist directory
  */
-gulp.task( 'clean', function() {
-    return gulp
-        .src( path.join( build.core.dist.base, '/**/*' ), {
-            read: false
-        } )
-        .pipe( rimraf() );
+gulp.task( 'clean', function( done ) {
+    del([ path.join( build.core.dist.base, '/**/*' ) ], done );
 });
 
 
